@@ -46,10 +46,10 @@ void up(int** cur_position)
 									    }
 	      else if (*(*cur_position - width) == ITEM)
 			     {
-					   **cur_position = 0; 
-			          *cur_position -= width;
-			         **cur_position = 2; score++; 
-										    }
+				  **cur_position = 0; 
+			      *cur_position -= width;
+			      **cur_position = 2; score++; 
+			     }
 
 		    return ;
 }
@@ -60,48 +60,48 @@ void down(int** cur_position)
 				 **cur_position = 0;
 				 *cur_position += width;
 				**cur_position = 2;
-											       }
+				}
 	      else if (*(*cur_position + width) == ITEM)
 			      {
-					  	 **cur_position = 0;
-							*cur_position += width;
-					 		 **cur_position = 2;
-							 score++;
-													     }
+				    **cur_position = 0;
+			     	*cur_position += width;
+				    **cur_position = 2;
+				    score++;
+			     }
 		      return;
 }
 void right(int** cur_position)
 {
 	   if (*(*cur_position + 1) == SPACE)
 		      {
-				  	 **cur_position = 0;
+			    	 **cur_position = 0;
 			  	   *cur_position += 1;
 			   	   **cur_position = 2;
-							      }
+		      }
 	       else if (*(*cur_position + 1) == ITEM)
 			   	{
-							**cur_position = 0;
-							*cur_position += 1;
-								**cur_position = 2;
-									score++; 
-											}
+					**cur_position = 0;
+					*cur_position += 1;
+					**cur_position = 2;
+					score++; 
+				}
 		       return;
 }
 void left(int** cur_position)
 {
 	   if (*(*cur_position - 1) == SPACE)
 		      {
-				  	   **cur_position = 0;
-					   	 *cur_position -= 1;
-				   	   **cur_position = 2;
-							      }
+					**cur_position = 0;
+				    *cur_position -= 1;
+				    **cur_position = 2;
+		     }
 	      else if (*(*cur_position - 1) == ITEM)
-			     {
-				 	  **cur_position = 0;
-				   	   *cur_position -= 1;
-				   	   **cur_position = 2;
-						   	   score++;
-								      }
+			   {
+				   **cur_position = 0;
+				  *cur_position -= 1;
+				   **cur_position = 2;
+			  	   score++;
+		      }
 		      return;
 }
 
