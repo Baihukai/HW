@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 #include<stdio.h>
+>>>>>>> hy/HW1
 #include<stdlib.h>
 #include<string.h>
 #include<conio.h>
@@ -18,6 +21,8 @@ void left(int** cur_position);
 void show(int[height][width]);
 
 int score = 0;
+
+<<<<<<< HEAD
 int map[height][width] ={
 	   { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 	   { 1,2,1,4,4,4,4,4,1,0,0,1,1,1,1,4,1,1,0,0,0,1,4,1,4,4,1,4,4,0,0,0,1 },
@@ -28,17 +33,24 @@ int map[height][width] ={
 	   { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 
 }
+=======
 int map[height][width];
+>>>>>>> hy/HW1
 
 int main(){
 
 
 
+<<<<<<< HEAD
 		return 0;
+=======
+	return 0;
+>>>>>>> hy/HW1
 }
 
 void up(int** cur_position)
 {
+<<<<<<< HEAD
 	   if (*(*cur_position - width) == SPACE)
 		      {
 				  **cur_position = 0;
@@ -104,7 +116,7 @@ void left(int** cur_position)
 			  	   score++;
 		      }
 		      return;
-}
+=======
    if (*(*cur_position - width) == SPACE)
    {
 	   **cur_position = 0;
@@ -119,5 +131,57 @@ void left(int** cur_position)
    }
 
   return ;
+}
+void down(int** cur_position)
+{
+   if (*(*cur_position + width) == SPACE)
+     {
+		  **cur_position = 0;
+		  *cur_position += width;
+		  **cur_position = 2;
+     }
+   else if (*(*cur_position + width) == ITEM)
+    {
+		 **cur_position = 0;
+		 *cur_position += width;
+		 **cur_position = 2;
+		 score++;
+    }
+    return;
+}
+void right(int** cur_position)
+{
+   if (*(*cur_position + 1) == SPACE)
+   {
+	   **cur_position = 0;
+	   *cur_position += 1;
+	   **cur_position = 2;
+   }
+    else if (*(*cur_position + 1) == ITEM)
+	{
+		**cur_position = 0;
+		*cur_position += 1;
+		**cur_position = 2;
+		score++; 
+	}
+    return;
+}
+void left(int** cur_position)
+{
+   if (*(*cur_position - 1) == SPACE)
+   {
+	   **cur_position = 0;
+	   *cur_position -= 1;
+	   **cur_position = 2;
+   }
+   else if (*(*cur_position - 1) == ITEM)
+   {
+	   **cur_position = 0;
+	   *cur_position -= 1;
+	   **cur_position = 2;
+	   score++;
+   }
+    return;
+>>>>>>> hy/HW1
 }
 
